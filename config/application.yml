@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/MS
+    username: postgres
+    password: postgres
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5555/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+
+
+#eureka.client.service-url.defaultZone =http://localhost:5555/eureka/
+#eureka.client.register-with-eureka=true
+#eureka.client.fetch-registry=true
+#eureka.client.healthcheck.enabled=true
+#eureka.instance.prefer-ip-address=true
