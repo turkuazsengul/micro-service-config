@@ -15,8 +15,8 @@ spring:
 eureka:
   client:
     service-url:
-#      defaultZone: http://eureka:5555/eureka/
-      defaultZone: http://localhost:5555/eureka/
+      defaultZone: http://eureka:5555/eureka/
+#      defaultZone: http://localhost:5555/eureka/
     register-with-eureka: true
     fetch-registry: true
     healthcheck:
