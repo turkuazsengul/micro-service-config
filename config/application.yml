@@ -33,7 +33,7 @@ spring:
               rabbitmq:
                 host: localhost
                 port: 5672
-                username: trendburada
+                username: trendburada1
                 password: trendburada
                 virtual-host: /
 #  rabbitmq:
