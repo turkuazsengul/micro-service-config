@@ -12,30 +12,30 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: none
-  cloud:
-    stream:
-      bindings:
-        mailOperationInputChannel:
-          destination: mail-service.operation
-          group: mail-service-group
-          binder: local_rabbit
-      rabbit:
-        bindings:
-          mailOperationInputChannel:
-            consumer:
-              autoBindDlq: true
-              republishToDlq: true
-      binders:
-        local_rabbit:
-          type: rabbit
-          environment:
-            spring:
-              rabbitmq:
-                host: localhost
-                port: 5672
-                username: trendburada1
-                password: trendburada
-                virtual-host: /
+#  cloud:
+#    stream:
+#      bindings:
+#        mailOperationInputChannel:
+#          destination: mail-service.operation
+#          group: mail-service-group
+#          binder: local_rabbit
+#      rabbit:
+#        bindings:
+#          mailOperationInputChannel:
+#            consumer:
+#              autoBindDlq: true
+#              republishToDlq: true
+#      binders:
+#        local_rabbit:
+#          type: rabbit
+#          environment:
+#            spring:
+#              rabbitmq:
+#                host: localhost
+#                port: 5672
+#                username: trendburada1
+#                password: trendburada
+#                virtual-host: /
 eureka:
   client:
     service-url:
