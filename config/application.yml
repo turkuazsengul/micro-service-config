@@ -23,28 +23,28 @@ eureka:
       enabled: true
   instance:
     prefer-ip-address: true
-cloud:
-  stream:
-    bindings:
-      mailOperationInputChannel:
-        destination: mail-service.operation
-        group: mail-service-group
-      mailOperationOutputChannel:
-        destination: mail-service.operation
-    rabbit:
-      bindings:
-        mailOperationInputChannel:
-          consumer:
-            autoBindDlq: true
-            republishToDlq: true
-    binders:
-      local_rabbit:
-        type: rabbit
-        environment:
-          spring:
-            rabbitmq:
-              host: 127.0.0.1
-              port: 5672
-              username: guest
-              password: guest
-              virtual-host: /
+#cloud:
+#  stream:
+#    bindings:
+#      mailOperationInputChannel:
+#        destination: mail-service.operation
+#        group: mail-service-group
+#      mailOperationOutputChannel:
+#        destination: mail-service.operation
+#    rabbit:
+#      bindings:
+#        mailOperationInputChannel:
+#          consumer:
+#            autoBindDlq: true
+#            republishToDlq: true
+#    binders:
+#      local_rabbit:
+#        type: rabbit
+#        environment:
+#          spring:
+#            rabbitmq:
+#              host: 127.0.0.1
+#              port: 5672
+#              username: guest
+#              password: guest
+#              virtual-host: /
