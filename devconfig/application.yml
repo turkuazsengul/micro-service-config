@@ -9,11 +9,11 @@ spring:
             scope: openid
         provider:
           keycloak:
-            issuer-uri: http://keycloak:8180/auth/realms/TrendBurada
+            issuer-uri: http://mykeycloak:8180/auth/realms/TrendBurada
             user-name-attribute: preferred_username
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8180/auth/realms/TrendBurada
+          issuer-uri: http://mykeycloak:8180/auth/realms/TrendBurada
   datasource:
     url: jdbc:postgresql://postgres:5432/ms
     username: postgres
@@ -26,6 +26,13 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: none
+
+keycloak:
+  client-secret: fNqy5SkbKladT9KBogw75oO2LwEfIIT5
+  realm-name: TrendBurada
+  uri:
+    user: http://mykeycloak:8180/auth/admin/realms/${keycloak.realm-name}/user
+
 eureka:
   client:
     service-url:
