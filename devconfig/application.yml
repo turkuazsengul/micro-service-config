@@ -30,8 +30,13 @@ spring:
 keycloak:
   client-secret: fNqy5SkbKladT9KBogw75oO2LwEfIIT5
   realm-name: TrendBurada
+  client-name: login-app
   uri:
-    user: http://mykeycloak:8180/auth/admin/realms/${keycloak.realm-name}/user
+    users: http://mykeycloak:8180/auth/admin/realms/${keycloak.realm-name}/users
+    userById: http://mykeycloak:8180/auth/admin/realms/${keycloak.realm-name}/user/{userId}
+    userWithRole: http://mykeycloak:8180/auth/admin/realms/${keycloak.realm-name}/users/{userId}/role-mappings/clients/{clientId}
+    roles: http://mykeycloak:8180/auth/admin/realms/${keycloak.realm-name}/roles
+    clients: http://mykeycloak:8180/auth/admin/realms/${keycloak.realm-name}/clients
 
 eureka:
   client:
