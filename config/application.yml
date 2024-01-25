@@ -31,6 +31,7 @@ keycloak:
   client-secret: fNqy5SkbKladT9KBogw75oO2LwEfIIT5
   realm-name: TrendBurada
   client-name: login-app
+  master-auth-uri: http://localhost:8180/auth/realms/master/protocol/openid-connect/token
   uri:
     users: http://localhost:8180/auth/admin/realms/${keycloak.realm-name}/users
     userById: http://localhost:8180/auth/admin/realms/${keycloak.realm-name}/user/{userId}
