@@ -33,6 +33,7 @@ keycloak:
   client-name: login-app
   master-auth-uri: http://localhost:8180/auth/realms/master/protocol/openid-connect/token
   uri:
+    userInfo: http://localhost:8180/auth/realms/${keycloak.realm-name}/protocol/openid-connect/userinfo
     users: http://localhost:8180/auth/admin/realms/${keycloak.realm-name}/users
     userById: http://localhost:8180/auth/admin/realms/${keycloak.realm-name}/user/{userId}
     userWithRole: http://localhost:8180/auth/admin/realms/${keycloak.realm-name}/users/{userId}/role-mappings/clients/{clientId}
