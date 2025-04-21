@@ -15,7 +15,7 @@ spring:
         jwt:
           issuer-uri: http://keycloak:8180/auth/realms/TrendBurada
   datasource:
-    url: jdbc:postgresql://postgres:5432/ms
+    url: jdbc:postgresql://postgres:5432/tbdb
     username: postgres
     password: postgres
     initialization-mode: always
@@ -31,7 +31,7 @@ keycloak:
   client-secret: fNqy5SkbKladT9KBogw75oO2LwEfIIT5
   realm-name: TrendBurada
   client-name: login-app
-  master-auth-uri: http://mykeycloak:8180/auth/realms/master/protocol/openid-connect/token
+  master-auth-uri: http://keycloak:8180/auth/realms/master/protocol/openid-connect/token
   uri:
     userInfo: http://keycloak:8180/auth/realms/${keycloak.realm-name}/protocol/openid-connect/userinfo
     users: http://keycloak:8180/auth/admin/realms/${keycloak.realm-name}/users

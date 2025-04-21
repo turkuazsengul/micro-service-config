@@ -15,7 +15,7 @@ spring:
         jwt:
           issuer-uri: http://localhost:8180/auth/realms/TrendBurada
   datasource:
-    url: jdbc:postgresql://localhost:5432/ms
+    url: jdbc:postgresql://localhost:5432/tbdb
     username: postgres
     password: postgres
     initialization-mode: always
