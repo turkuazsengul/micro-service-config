@@ -28,7 +28,7 @@ spring:
       ddl-auto: none
 
 keycloak-admin:
-  server-url: http://keycloak:8080/auth
+  server-url: http://localhost:8080/auth
   client-secret: fNqy5SkbKladT9KBogw75oO2LwEfIIT5
   realm-name: master
   client-name: admin-cli
