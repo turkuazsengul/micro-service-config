@@ -28,7 +28,7 @@ spring:
       ddl-auto: none
 
 keycloak-admin:
-  server-url: http://localhost:8080/auth
+  server-url: http://keycloak:8080
   client-secret: fNqy5SkbKladT9KBogw75oO2LwEfIIT5
   realm-name: master
   client-name: admin-cli
@@ -39,14 +39,14 @@ keycloak:
   client-secret: fNqy5SkbKladT9KBogw75oO2LwEfIIT5
   realm-name: TrendBurada
   client-name: login-app
-  master-auth-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/token
+  master-auth-uri: http://keycloak:8080/realms/master/protocol/openid-connect/token
   uri:
-    userInfo: http://localhost:8080/auth/realms/${keycloak.realm-name}/protocol/openid-connect/userinfo
-    users: http://localhost:8080/auth/admin/realms/${keycloak.realm-name}/users
-    userById: http://localhost:8080/auth/admin/realms/${keycloak.realm-name}/user/{userId}
-    userWithRole: http://localhost:8080/auth/admin/realms/${keycloak.realm-name}/users/{userId}/role-mappings/clients/{clientId}
-    roles: http://localhost:8080/auth/admin/realms/${keycloak.realm-name}/roles
-    clients: http://localhost:8080/auth/admin/realms/${keycloak.realm-name}/clients
+    userInfo: http://keycloak:8080/realms/${keycloak.realm-name}/protocol/openid-connect/userinfo
+    users: http://keycloak:8080/admin/realms/${keycloak.realm-name}/users
+    userById: http://keycloak:8080/admin/realms/${keycloak.realm-name}/user/{userId}
+    userWithRole: http://keycloak:8080/admin/realms/${keycloak.realm-name}/users/{userId}/role-mappings/clients/{clientId}
+    roles: http://keycloak:8080/admin/realms/${keycloak.realm-name}/roles
+    clients: http://keycloak:8080/admin/realms/${keycloak.realm-name}/clients
 
 eureka:
   client:
